@@ -336,7 +336,7 @@ class App {
     body.append(flat);
     body.append(el('p.muted.small', { style: { margin: 0 } },
       el('a', { href: 'privacy.html', target: '_blank', rel: 'noopener' }, 'Privacy policy'), ' · ',
-      el('a', { href: 'https://github.com/YoRu-Cat/FREE-PDF-EDITOR', target: '_blank', rel: 'noopener' }, 'Source code')));
+      el('a', { href: 'https://github.com/YoRu-Cat/FREE-PDF-EDITOR-FOR-ALL/issues', target: '_blank', rel: 'noopener' }, 'Report a problem')));
     const ok = await modal({
       title: 'Document properties', body,
       buttons: [{ label: 'Cancel', value: false }, { label: 'Save', value: true, primary: true }],

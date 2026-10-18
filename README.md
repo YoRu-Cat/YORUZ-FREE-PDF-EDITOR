@@ -1,144 +1,241 @@
-# PDF Editor
+<div align="center">
 
-A web-based PDF editor that changes the **actual content of the PDF**. Edited and erased text is removed from the page's content stream rather than covered with white boxes, so copy/paste, search and text extraction in the downloaded file show only the new text.
+<img src="assets/logo.svg" alt="Free PDF Editor logo" width="96" height="96">
 
-## Features
+# FREE PDF EDITOR
 
-| Area | What you can do |
+### Edit the *actual text* inside any PDF. In your browser. For free. Forever.
+
+> **tired of getting scammed for pay to download bullshit. well fuck that here you can use this tool for free.**
+
+<a href="https://free-pdf-editor-waj8.onrender.com">
+  <img src="https://img.shields.io/badge/%F0%9F%9A%80%20OPEN%20THE%20EDITOR-it's%20free-e5484d?style=for-the-badge&labelColor=1c2024" alt="Open the editor" height="44">
+</a>
+
+<br><br>
+
+![Price](https://img.shields.io/badge/price-%240.00-30a46c?style=flat-square)
+![Sign-up](https://img.shields.io/badge/sign--up-none-3e63dd?style=flat-square)
+![Watermark](https://img.shields.io/badge/watermark-never-8e4ec6?style=flat-square)
+![Paywall](https://img.shields.io/badge/pay%20to%20download-LOL%20no-e5484d?style=flat-square)
+![Ads](https://img.shields.io/badge/ads-zero-f76b15?style=flat-square)
+![Trackers](https://img.shields.io/badge/trackers-zero-1c2024?style=flat-square)
+![Open source](https://img.shields.io/badge/open%20source-AGPL--3.0-30a46c?style=flat-square)
+
+<br>
+
+<img src="assets/editing.png" alt="Editing the total on an invoice directly inside the PDF" width="900">
+
+<sub>☝️ That's a real PDF being edited. Click the text, type, done. Same font, same size, same colour.</sub>
+
+</div>
+
+---
+
+## 💀 The problem
+
+You've been here before:
+
+1. You google "free PDF editor".
+2. You upload your file, make your edits, and feel good about life.
+3. You click **Download** and…
+4. 💸 *"Upgrade to Pro to download your file!"* 💸
+5. Or there's a giant watermark. Or "you've used your 2 free tasks today". Or you have to make an account and then get spammed forever.
+
+**Nah. Not here.**
+
+## ✨ The solution
+
+Open the link. Drop your PDF. Edit it. Download it. **That's the whole process.**
+
+No account, no credit card, no "free trial", no watermark, and the Download button doesn't hide a paywall.
+
+<div align="center">
+  <img src="assets/home.png" alt="Start screen" width="800">
+</div>
+
+---
+
+## 🔥 What it can do
+
+### ✏️ It edits the REAL text, not a white box slapped on top
+
+Most "free" editors cheat. They cover your old text with a white rectangle and put new text on top, so the old text is still hiding in the file. Copy-paste or search the PDF and there it is.
+
+This editor **removes the original letters from the PDF itself** and writes your new text in their place, in a matching font. Old text deleted means it's actually gone.
+
+| | |
 |---|---|
-| **Edit text** | Click any line to retype it in place, or switch to *Paragraph* mode to rewrite a whole block with automatic reflow (left / centre / right / justified alignment is detected). Font, size, colour, bold and italic are kept, or you can change them. |
-| **Erase text** | Drag over text to delete those glyphs from the file. Images and vector graphics stay. |
-| **Erase / redact area** | Permanently remove text, images and drawings inside a box, with a white, black or no fill. |
-| **Add content** | Text boxes (standard and installed system fonts), images, signatures (drawn or uploaded, optionally remembered), freehand drawing, rectangles, ellipses, lines, arrows, whiteout. |
-| **Annotate** | Highlight, underline, strikeout and squiggly markup; comments; delete existing annotations. |
-| **Forms** | Fill text fields, checkboxes, radio buttons and dropdowns; flatten forms. |
-| **Images** | Replace or delete images that are already in the PDF. |
-| **Pages** | Reorder by dragging thumbnails, rotate, duplicate, delete, insert blank pages, merge in other PDFs or images, extract pages. |
-| **Document** | Find with highlighted results, replace across all pages, undo/redo (50 steps), metadata, AES-256 password-protected export, opening encrypted PDFs. |
-| **Input formats** | PDF, plus images, XPS, EPUB, CBZ, FB2 and SVG (converted to PDF on open). |
+| ✏️ **Edit any line** | Click it and type. Font, size, colour, bold and italic are kept automatically. |
+| 📝 **Rewrite paragraphs** | Switch to paragraph mode and the text re-wraps and re-aligns itself. |
+| 🧽 **Erase text** | Drag over words and they're gone from the file. Pictures and lines stay. |
+| ⬛ **Erase or redact areas** | Wipe out text, images and drawings inside a box, for real. |
+| 🔎 **Find & replace** | Change a name, price or date across every page at once. |
+| 🔤 **Add text** | Lots of fonts, any size or colour, bold, italic, alignment. |
+| ✍️ **Sign documents** | Draw your signature or upload one, then place it as many times as you like. |
+| 🖍️ **Highlight & mark up** | Highlight, underline, strike through, squiggly. |
+| 🖊️ **Draw** | Freehand pen, rectangles, circles, lines, arrows. |
+| 🖼️ **Images** | Add pictures, or replace and delete images already in the PDF. |
+| ⬜ **Whiteout** | Cover anything with a solid box. |
+| 💬 **Comments** | Leave sticky-note comments. |
+| 📋 **Fill forms** | Text boxes, checkboxes and dropdowns. Flatten them when you're done. |
+| 📄 **Page tools** | Drag to reorder, rotate, duplicate, delete, add blank pages, merge PDFs, extract pages. |
+| 🔒 **Passwords** | Open locked PDFs (if you know the password) and save with AES-256 password protection. |
+| ↩️ **Undo / redo** | Up to 50 steps. Mistakes are free too. |
+| 🌙 **Dark mode** | Follows your system theme automatically. |
+| 🖼️ **Not just PDFs** | Images, XPS and EPUB files are converted to PDF so you can edit them. |
 
-### How text editing works
+<div align="center">
+  <img src="assets/result.png" alt="Invoice after editing the total and highlighting the client's name" width="800">
+  <br>
+  <sub>Total changed, name highlighted. The downloaded file contains only the new text.</sub>
+</div>
 
-1. MuPDF extracts every character with its position, glyph box and font. The characters are grouped into lines and paragraphs **by position on the page**, not by the order they appear in the file. Text written by earlier edits therefore merges back into its line.
-2. The editor compares the old and new text. Only the characters from the first change onwards are touched, so the unchanged start of the line keeps its original glyphs exactly.
-3. Those glyphs are removed with a *text-only* redaction. Images, vector graphics and neighbouring lines are not affected, and nothing is painted over the area.
-4. The new text is written on the same baseline. The font is chosen per character, in this order:
-   1. the PDF's own embedded font (when it contains every glyph needed);
-   2. an installed system font with the same name or family and style;
-   3. the closest standard PDF font (Helvetica, Times or Courier);
-   4. Unicode fallback fonts.
+---
 
-   The unchanged end of the line is shifted to keep its original spacing.
+## ⚡ How to use it (10 seconds)
 
-## Architecture
+1. **Open** 👉 [free-pdf-editor-waj8.onrender.com](https://free-pdf-editor-waj8.onrender.com)
+2. **Drop** your PDF on the page, or click **Open PDF**.
+3. **Click** any text to change it, or pick a tool from the left side.
+4. **Download.** Free. Obviously.
 
-```
-browser (static/, no build step)         server (app/, FastAPI)
-┌──────────────────────────────┐  JSON  ┌────────────────────────────────────────┐
-│ app.js    shell, dialogs,    │ ─────▶ │ api/routes.py   HTTP endpoints         │
-│           shortcuts, queue   │  PNG   │ api/schemas.py  request validation     │
-│ viewer.js pages, lazy render,│ ◀───── │ pdf/text.py     text model + editing   │
-│           thumbnails, zoom   │        │ pdf/ops.py      draw, images, annots,  │
-│ tools.js  editors, drag/draw │        │                 forms, pages, export   │
-│ api.js    REST client        │        │ pdf/fonts.py    font discovery/matching│
-│ ui.js     icons, modals      │        │ pdf/geometry.py rotated-page coords    │
-└──────────────────────────────┘        │ store.py        sessions, versions,    │
-                                        │                 undo/redo, locking     │
-                                        │ config.py       env-var settings       │
-                                        └──────────────┬─────────────────────────┘
-                                                       │
-                                     <PDFE_DATA_DIR>/sessions/<id>/
-                                        meta.json, v000001.pdf, v000002.pdf, …
-```
+### ⌨️ Shortcuts for speedrunners
 
-- **The server is the source of truth.** The browser shows server-rendered page images with clickable text and object overlays. Every edit is one API call that returns the list of pages that need re-rendering.
-- **Disk-backed sessions.** Each document is a folder holding one complete PDF per version, which provides undo/redo. Sessions survive restarts and keep memory bounded. Idle sessions are deleted after `PDFE_SESSION_TTL_MINUTES`.
-- **Concurrency.** MuPDF is not thread-safe, so PDF work in each process runs under one lock. A per-session file lock keeps several worker processes from conflicting, so `--workers N` is safe.
-- **Coordinates.** The API always uses *display space* (the page as it appears, after rotation). The engine converts to the PDF's unrotated space, so editing works on rotated pages.
+| Key | Tool | | Key | Action |
+|:---:|---|---|:---:|---|
+| `V` | Edit text | | `Ctrl` `Z` | Undo |
+| `T` | Add text | | `Ctrl` `Y` | Redo |
+| `E` | Erase text | | `Ctrl` `S` | Download |
+| `R` | Erase / redact area | | `Ctrl` `F` | Find & replace |
+| `W` | Whiteout | | `Ctrl` `O` | Open a file |
+| `H` | Highlight | | `Ctrl` `+` / `-` | Zoom |
+| `P` | Draw | | `Ctrl` `0` | Fit to width |
+| `S` | Shapes | | `Enter` | Apply a line edit |
+| `I` | Image | | `Ctrl` `Enter` | Apply a paragraph or new text |
+| `G` | Signature | | `Esc` | Cancel |
+| `N` | Comment | | | |
+| `F` | Fill forms | | | |
 
-## Run locally
+---
+
+## 🆚 Them vs. us
+
+| | Typical "free" PDF site | **FREE PDF EDITOR** |
+|---|:---:|:---:|
+| Download your edited file | 💸 "Go Pro" | ✅ Free |
+| Watermark on your document | 😬 Often | ✅ Never |
+| Account required | 📧 Usually | ✅ No |
+| Daily task limits | ⏳ Yep | ✅ No |
+| Edits the real text (not a white box) | 🤷 Rarely | ✅ Yes |
+| Ads and trackers | 📈 Plenty | ✅ None |
+
+---
+
+## 🛡️ Privacy, TL;DR
+
+- 🚫 No accounts, no ads, no analytics, no cookies.
+- 🤖 Your file is only processed by software so it can be edited. Nobody looks at it, sells it, or trains AI on it.
+- 🗑️ Click **✕** when you're done and your file is deleted from the server immediately. If you just close the tab, it's deleted automatically after 2 hours.
+- 🔐 Everything travels over HTTPS.
+
+Read the full thing: **[Privacy Policy](https://free-pdf-editor-waj8.onrender.com/privacy.html)**
+
+<div align="center">
+  <img src="assets/dark.png" alt="Dark mode" width="800">
+  <br>
+  <sub>Dark mode, for the night owls 🦉</sub>
+</div>
+
+---
+
+## ❓ FAQ
+
+<details>
+<summary><b>Is it actually free? What's the catch?</b></summary>
+<br>
+It's actually free. No catch, no "Pro" plan, no download paywall, no watermark. It exists because paying to download your own file is ridiculous.
+</details>
+
+<details>
+<summary><b>Why did it take ~30 seconds to load?</b></summary>
+<br>
+The server runs on a free hosting plan and goes to sleep when nobody is using it. The first visit wakes it up, which takes about 30 seconds. After that it's quick.
+</details>
+
+<details>
+<summary><b>Is my file safe?</b></summary>
+<br>
+Files are sent over HTTPS, nobody looks at them, and they're deleted when you click ✕ or after 2 hours of inactivity. That said, your file does go to a server to be edited. For extremely sensitive documents, <a href="#-run-it-yourself">run your own copy</a> so your files never leave your computer. See the <a href="https://free-pdf-editor-waj8.onrender.com/privacy.html">privacy policy</a>.
+</details>
+
+<details>
+<summary><b>Will my edited text match the original font?</b></summary>
+<br>
+In most cases, yes. The editor reuses the font that's built into the PDF when it can. If it can't, it picks the closest matching font. Bold, italic, size and colour are kept.
+</details>
+
+<details>
+<summary><b>Can I edit scanned PDFs?</b></summary>
+<br>
+A scanned page is just a picture of text, so there are no real letters to edit. You can still add text, white out or erase areas, sign, draw and highlight on scans.
+</details>
+
+<details>
+<summary><b>Is there a file size limit?</b></summary>
+<br>
+50 MB per file. That's plenty for almost every document.
+</details>
+
+<details>
+<summary><b>Does it work on my phone?</b></summary>
+<br>
+It opens on phones and tablets, but precise editing works best on a laptop or desktop with a mouse.
+</details>
+
+<details>
+<summary><b>Is it open source?</b></summary>
+<br>
+Yes! Every line is in this repo under the <a href="LICENSE">AGPL-3.0</a> licence. Read it, run it, improve it. If you host a modified version for other people, the licence asks you to share your changes too.
+</details>
+
+---
+
+## 🧑‍💻 Run it yourself
+
+Want it on your own computer, so your files never leave it? You need [Python 3.10+](https://www.python.org/downloads/):
 
 ```bash
+git clone https://github.com/YoRu-Cat/FREE-PDF-EDITOR.git
+cd FREE-PDF-EDITOR
 pip install -r requirements.txt
-python run.py            # opens http://localhost:8000
+python run.py          # opens http://localhost:8000
 ```
 
-On Windows you can double-click `start.bat` instead.
+On Windows you can double-click **`start.bat`** instead. Want your own public copy? Use the Docker setup or deploy to Render in one click. Everything is explained in the **[developer guide](DEVELOPMENT.md)**, including how it works under the hood.
 
-Run the tests with:
+---
 
-```bash
-pip install -r requirements-dev.txt
-python -m pytest -q
-```
+## 🐛 Found a bug? Got an idea?
 
-Interactive API docs are at `/api/docs`.
+[**Open an issue →**](https://github.com/YoRu-Cat/FREE-PDF-EDITOR/issues/new/choose)
 
-## Deploy
+Tell us what you did, what you expected, and what happened instead. A screenshot helps a lot. *(Please don't attach private documents.)*
 
-### One click on Render (free tier)
+Pull requests are welcome too! Run `python -m pytest -q` before sending one.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/YoRu-Cat/FREE-PDF-EDITOR)
+---
 
-`render.yaml` builds the Dockerfile on a free web service. Every push to `main` redeploys automatically.
+<div align="center">
 
-On the free tier:
-- the service sleeps after 15 minutes without traffic, so the first request after that takes about 30 seconds;
-- open documents are lost when the service restarts. For persistent storage, use a paid plan with a disk mounted at `/data`.
+### If this saved you from a paywall, ⭐ star this repo and send the link to a friend who's about to pay for a PDF editor.
 
-The same Dockerfile also runs on Railway, Fly.io, Koyeb and Google Cloud Run. All of them set `$PORT`, which the container uses.
+<a href="https://free-pdf-editor-waj8.onrender.com">
+  <img src="https://img.shields.io/badge/%E2%9C%A8%20EDIT%20A%20PDF%20NOW-free-e5484d?style=for-the-badge&labelColor=1c2024" alt="Edit a PDF now" height="40">
+</a>
 
-### Docker (recommended)
+<br><br>
 
-```bash
-docker compose up -d --build     # http://<host>:8000
-```
+<sub>Made with 😤 and ❤️ by <a href="https://github.com/YoRu-Cat">YoRu</a> · <a href="LICENSE">AGPL-3.0</a> · No paywalls were harmed in the making of this tool.</sub>
 
-The image installs free fonts that are metric-compatible with common ones (Liberation for Arial/Times/Courier, Carlito/Caladea for Calibri/Cambria, plus DejaVu and Noto). These matter when a PDF doesn't embed its fonts. The image runs as a non-root user, stores data in the `/data` volume and has a health check at `/api/health`.
-
-### Any VPS or PaaS without Docker
-
-```bash
-pip install -r requirements.txt
-PDFE_HOST=0.0.0.0 PDFE_DATA_DIR=/var/lib/pdf-editor \
-  uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2 --proxy-headers
-```
-
-### Behind a reverse proxy (nginx)
-
-```nginx
-client_max_body_size 100m;          # must be >= PDFE_MAX_UPLOAD_MB
-location / { proxy_pass http://127.0.0.1:8000; proxy_set_header Host $host;
-             proxy_set_header X-Forwarded-Proto $scheme; proxy_read_timeout 120s; }
-```
-
-### Scaling
-
-- **One machine:** raise `PDFE_WORKERS`. The workers share the data directory.
-- **Several machines:** either mount a shared volume at `PDFE_DATA_DIR` (NFS, EFS or similar, with file-lock support) or turn on sticky sessions in the load balancer.
-- **Frontend on a separate host or CDN:** serve the `static/` folder from there, set `window.PDFE_API_BASE = "https://api.example.com"` before `js/app.js` loads, and add that origin to `PDFE_CORS_ORIGINS`.
-
-## Configuration
-
-All settings are environment variables, and a `.env` file is also read (see `.env.example`).
-
-| Variable | Default | Meaning |
-|---|---|---|
-| `PDFE_HOST` / `PDFE_PORT` | `127.0.0.1` / `8000` | Address the server listens on |
-| `PDFE_WORKERS` | `1` | Number of uvicorn worker processes |
-| `PDFE_DATA_DIR` | `./data` | Where documents and undo history are stored |
-| `PDFE_MAX_UPLOAD_MB` | `100` | Maximum upload size |
-| `PDFE_SESSION_TTL_MINUTES` | `240` | Idle documents are deleted after this many minutes |
-| `PDFE_MAX_UNDO` | `50` | Undo steps kept per document |
-| `PDFE_DOC_CACHE_SIZE` | `8` | Parsed documents kept in memory per worker |
-| `PDFE_MAX_RENDER_SCALE` | `4` | Upper limit on page-render resolution |
-| `PDFE_CORS_ORIGINS` | *(empty)* | Comma-separated allowed origins, needed only when the frontend is hosted elsewhere |
-
-## Security notes
-
-- Documents are stored unencrypted under `PDFE_DATA_DIR` until they expire. Put that directory on storage you trust.
-- There is no user login. A document is reachable only through its random 128-bit session ID. For a public deployment, put authentication in front of the app (reverse-proxy auth, an OAuth proxy or similar) and use HTTPS.
-
-## Licensing
-
-The PDF engine is **PyMuPDF / MuPDF, licensed under AGPL-3.0**. Running it as a network service means you must make your source code available to its users under the AGPL, **or** buy a commercial licence from Artifex. FastAPI and uvicorn are MIT/BSD licensed.
+</div>

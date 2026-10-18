@@ -1,0 +1,19 @@
+# Render Blueprint – https://render.com/docs/blueprint-spec
+# One-click deploy: https://render.com/deploy?repo=https://github.com/YoRu-Cat/FREE-PDF-EDITOR
+services:
+  - type: web
+    name: free-pdf-editor
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PDFE_WORKERS
+        value: "1"            # free instances have 512 MB RAM
+      - key: PDFE_MAX_UPLOAD_MB
+        value: "50"
+      - key: PDFE_SESSION_TTL_MINUTES
+        value: "120"
+      - key: PDFE_DATA_DIR
+        value: /data

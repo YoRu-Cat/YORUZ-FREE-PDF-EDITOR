@@ -1,0 +1,16 @@
+services:
+  pdf-editor:
+    build: .
+    image: pdf-editor:latest
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      PDFE_WORKERS: "2"
+      PDFE_MAX_UPLOAD_MB: "100"
+      PDFE_SESSION_TTL_MINUTES: "240"
+    volumes:
+      - pdf-data:/data
+
+volumes:
+  pdf-data:

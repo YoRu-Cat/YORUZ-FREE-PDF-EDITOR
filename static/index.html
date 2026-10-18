@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF Editor</title>
+  <meta name="description" content="Edit, erase and rewrite text directly inside PDF files.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-tool="edit">
+  <div id="busy" class="busy" hidden><span></span></div>
+
+  <!-- ───────────── top bar ───────────── -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="favicon.svg" alt="" width="22" height="22">
+      <span>PDF Editor</span>
+    </div>
+    <div class="tb-group">
+      <button class="btn ghost" id="btnOpen" title="Open a PDF (Ctrl+O)" data-icon="open">Open</button>
+      <button class="btn ghost" id="btnNew" title="New blank document" data-icon="file">New</button>
+    </div>
+    <div class="docname" id="docNameWrap" hidden>
+      <input id="docName" spellcheck="false" title="File name used for downloads">
+    </div>
+    <div class="tb-group" id="docControls" hidden>
+      <button class="icon-btn" id="btnUndo" title="Undo (Ctrl+Z)" data-icon="undo"></button>
+      <button class="icon-btn" id="btnRedo" title="Redo (Ctrl+Y)" data-icon="redo"></button>
+      <span class="sep"></span>
+      <button class="icon-btn" id="btnZoomOut" title="Zoom out (Ctrl+-)" data-icon="minus"></button>
+      <button class="zoom-label" id="zoomLabel" title="Fit width">100%</button>
+      <button class="icon-btn" id="btnZoomIn" title="Zoom in (Ctrl++)" data-icon="plus"></button>
+      <span class="sep"></span>
+      <span class="pager"><input id="pageInput" value="1" inputmode="numeric"> / <span id="pageCount">1</span></span>
+      <span class="sep"></span>
+      <button class="icon-btn" id="btnFind" title="Find &amp; replace (Ctrl+F)" data-icon="search"></button>
+      <button class="icon-btn" id="btnProps" title="Document properties" data-icon="info"></button>
+    </div>
+    <div class="tb-right" id="docActions" hidden>
+      <button class="btn primary" id="btnDownload" title="Download PDF (Ctrl+S)" data-icon="download">Download</button>
+      <button class="icon-btn" id="btnExportOpts" title="Download options (password, page range, flatten)" data-icon="more"></button>
+    </div>
+  </header>
+
+  <!-- ───────────── tool options bar ───────────── -->
+  <div class="optbar" id="optbar" hidden></div>
+
+  <div class="workspace" id="workspace" hidden>
+    <!-- tool rail -->
+    <nav class="rail" id="rail" aria-label="Tools"></nav>
+
+    <!-- thumbnails -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head">
+        <span>Pages</span>
+        <div>
+          <button class="icon-btn sm" id="btnAddBlank" title="Insert blank page after current" data-icon="fileplus"></button>
+          <button class="icon-btn sm" id="btnInsertFile" title="Insert pages from a PDF or image" data-icon="merge"></button>
+        </div>
+      </div>
+      <div class="thumbs" id="thumbs"></div>
+    </aside>
+
+    <!-- pages -->
+    <main class="viewer" id="viewer" tabindex="-1">
+      <div class="pages" id="pages"></div>
+    </main>
+  </div>
+
+  <!-- ───────────── find panel ───────────── -->
+  <section class="find-panel" id="findPanel" hidden>
+    <div class="row">
+      <input id="findInput" placeholder="Find text…" spellcheck="false">
+      <span class="find-count" id="findCount"></span>
+      <button class="icon-btn sm" id="findPrev" title="Previous" data-icon="up"></button>
+      <button class="icon-btn sm" id="findNext" title="Next" data-icon="down"></button>
+      <button class="icon-btn sm" id="findClose" title="Close" data-icon="x"></button>
+    </div>
+    <div class="row">
+      <input id="replaceInput" placeholder="Replace with…" spellcheck="false">
+      <button class="btn sm" id="replaceAll">Replace all</button>
+    </div>
+    <label class="check"><input type="checkbox" id="findCase"> Match case</label>
+  </section>
+
+  <!-- ───────────── welcome ───────────── -->
+  <section class="welcome" id="welcome">
+    <div class="drop" id="dropZone">
+      <img src="favicon.svg" alt="" width="56" height="56">
+      <h1>Edit any PDF</h1>
+      <p>Change and erase the real text inside your PDF, add text, images, signatures and drawings, fill forms, and rearrange pages.</p>
+      <div class="welcome-actions">
+        <button class="btn primary lg" id="btnOpen2" data-icon="open">Open PDF</button>
+        <button class="btn lg" id="btnNew2" data-icon="file">Blank document</button>
+      </div>
+      <p class="muted small">…or drop a file anywhere. Images, XPS, EPUB and other formats are converted to PDF.</p>
+    </div>
+  </section>
+
+  <div class="drop-overlay" id="dropOverlay" hidden><div>Drop to open</div></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <input type="file" id="fileInput" accept=".pdf,application/pdf,image/*,.xps,.epub,.oxps,.cbz,.fb2,.svg" hidden>
+  <input type="file" id="insertInput" accept=".pdf,application/pdf,image/*" hidden>
+  <input type="file" id="imageInput" accept="image/*" hidden>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

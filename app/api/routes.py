@@ -71,7 +71,9 @@ def _style(style: S.TextStyle | None) -> dict | None:
 # ---------------------------------------------------------------------------
 @router.get("/health")
 def health():
-    return {"ok": True, "pymupdf": fitz.VersionBind}
+    return {"ok": True, "pymupdf": fitz.VersionBind,
+            "session_ttl_minutes": settings.session_ttl_minutes,
+            "max_upload_mb": settings.max_upload_mb}
 
 
 @router.get("/fonts")

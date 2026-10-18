@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – PDF Editor</title>
+  <meta name="description" content="How the free PDF editor handles your files: no accounts, no tracking, files deleted automatically.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+    body { overflow: auto; }
+    .policy-top {
+      height: var(--topbar); display: flex; align-items: center; padding: 0 16px;
+      background: var(--panel); border-bottom: 1px solid var(--border);
+    }
+    .policy-top a { display: flex; align-items: center; gap: 8px; color: var(--text); text-decoration: none; font-weight: 650; }
+    .policy-top .back { margin-left: auto; font-weight: 500; }
+    .policy { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; line-height: 1.6; }
+    .policy h1 { font-size: 30px; letter-spacing: -.02em; margin: 0 0 4px; }
+    .policy h2 { font-size: 18px; margin: 32px 0 8px; }
+    .policy p, .policy li { color: var(--text); }
+    .policy ul { padding-left: 20px; }
+    .policy li { margin: 4px 0; }
+    .policy .lead { font-size: 17px; }
+    .policy a { color: var(--focus); }
+    .policy .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; }
+    .policy code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header class="policy-top">
+    <a href="./"><img src="favicon.svg" alt="" width="22" height="22"> PDF Editor</a>
+    <a class="back" href="./">← Back to the editor</a>
+  </header>
+
+  <main class="policy">
+    <h1>Privacy Policy</h1>
+    <p class="muted small">Last updated: 18 October 2026</p>
+
+    <div class="card">
+      <p class="lead" style="margin:0"><strong>Short version:</strong> no accounts, no ads, no tracking, no cookies.
+      Your file is uploaded only so it can be edited, nobody looks at it, and it is deleted automatically
+      after <strong><span class="ttl">a few hours</span> of inactivity</strong>, or right away when you close it.</p>
+    </div>
+
+    <h2>What we collect</h2>
+    <ul>
+      <li><strong>The files you open.</strong> Editing happens on our server, so the file you choose is uploaded to it.</li>
+      <li><strong>Basic server logs.</strong> Like almost every website, the server and our hosting provider record technical request logs:
+        IP address, time, and the address that was requested. These logs never contain the contents of your files.</li>
+    </ul>
+    <p>That's it. We don't ask for your name, email or any account, and we don't use analytics, advertising, tracking pixels or cookies.</p>
+
+    <h2>How your files are handled</h2>
+    <ul>
+      <li>Files travel to the server over an encrypted HTTPS connection.</li>
+      <li>While you edit, the server keeps a working copy of your document plus earlier versions so <em>Undo</em> works.</li>
+      <li>Each document is identified only by a long random ID that is kept in your own browser. It isn't put in links you share, and nobody else is given it.</li>
+      <li>Your files are processed automatically by software. No person looks at them, and they are
+        <strong>never sold, shared, published or used to train AI</strong>.</li>
+      <li>When you click <em>Download</em>, the PDF is generated on the fly and sent to you. No extra copy is kept.</li>
+    </ul>
+
+    <h2>When your files are deleted</h2>
+    <ul>
+      <li><strong>Right away</strong>, when you click the <strong>✕ Close</strong> button in the editor's top bar.</li>
+      <li><strong>Right away</strong>, when you open or create another document in the same browser tab (the previous one is deleted).</li>
+      <li><strong>Automatically</strong>, after <strong class="ttl">a few hours</strong> without any activity, if you just close the tab.</li>
+      <li>On our free hosting plan, a server restart also wipes all stored documents.</li>
+    </ul>
+    <p>Deleted files and their edit history can't be recovered, so download your work before you leave.</p>
+
+    <h2>Passwords</h2>
+    <p>If you open a password-protected PDF, the password is used once to unlock it and is not stored. The working copy on the server is
+      kept unencrypted while you edit it, and it is deleted as described above. A password you set when downloading is used only to encrypt that download and is not stored.</p>
+
+    <h2>Stored in your browser</h2>
+    <p>The site uses your browser's local storage, which never leaves your device, for:</p>
+    <ul>
+      <li>the ID of the document you're editing, so a page refresh doesn't lose your work;</li>
+      <li>your tool settings (font, colours, line width…);</li>
+      <li>your signature, only if you tick <em>Remember</em> in the signature window. It is sent to the server only when you place it in a document.</li>
+    </ul>
+    <p>You can clear all of this at any time by clearing this site's data in your browser settings.</p>
+
+    <h2>Hosting</h2>
+    <p>The site runs on <a href="https://render.com" target="_blank" rel="noopener">Render</a>, which provides the servers and may keep
+      its own request logs under <a href="https://render.com/privacy" target="_blank" rel="noopener">its privacy policy</a>.</p>
+
+    <h2>Very sensitive documents</h2>
+    <p>This editor is open source. If you'd rather your files never leave your computer, you can
+      <a href="https://github.com/YoRu-Cat/FREE-PDF-EDITOR" target="_blank" rel="noopener">download the code</a> and run it locally
+      with one command (<code>python run.py</code>).</p>
+
+    <h2>Limits</h2>
+    <p>Uploads are limited to <strong class="max-mb">the configured size</strong> per file. The service is provided free and as-is, with no guarantee of availability.</p>
+
+    <h2>Changes &amp; contact</h2>
+    <p>If this policy changes, the date at the top will change too. For questions, open an issue on
+      <a href="https://github.com/YoRu-Cat/FREE-PDF-EDITOR/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+  </main>
+
+  <script>
+    // Show the server's real retention period and upload limit.
+    fetch('api/health').then((r) => r.json()).then((h) => {
+      const m = h.session_ttl_minutes;
+      if (m) {
+        const text = m % 60 === 0 ? `${m / 60} hour${m === 60 ? '' : 's'}` : `${m} minutes`;
+        document.querySelectorAll('.ttl').forEach((n) => { n.textContent = text; });
+      }
+      if (h.max_upload_mb) document.querySelectorAll('.max-mb').forEach((n) => { n.textContent = `${h.max_upload_mb} MB`; });
+    }).catch(() => {});
+  </script>
+</body>
+</html>

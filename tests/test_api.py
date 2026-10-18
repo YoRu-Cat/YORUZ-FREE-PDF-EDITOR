@@ -58,7 +58,20 @@ def pdf_text(client, sid, page=0):
 
 
 def test_health(client):
-    assert client.get("/api/health").json()["ok"]
+    h = client.get("/api/health").json()
+    assert h["ok"] and h["session_ttl_minutes"] > 0 and h["max_upload_mb"] > 0
+
+
+def test_static_pages(client):
+    home = client.get("/")
+    assert home.status_code == 200 and "Privacy policy" in home.text
+    privacy = client.get("/privacy.html")
+    assert privacy.status_code == 200 and "Privacy Policy" in privacy.text
+
+
+def test_delete_document(client, sid):
+    assert client.delete(f"/api/documents/{sid}").json()["ok"]
+    assert client.get(f"/api/documents/{sid}").status_code == 404
 
 
 def test_edit_line_replaces_real_text(client, sid):

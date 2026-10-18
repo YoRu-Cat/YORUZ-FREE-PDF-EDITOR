@@ -197,6 +197,24 @@ class App {
     try { await this.applyState(await api.redo(this.state.doc.id)); } catch (e) { this.handleError(e); }
   }
 
+  /** Close the document and remove it (and its undo history) from the server right away. */
+  async closeAndDelete() {
+    if (!this.state.doc) return;
+    const ok = await confirmBox('Close document',
+      'This deletes the file and its edit history from the server. Download it first if you want to keep your changes.',
+      'Close & delete', true);
+    if (!ok) return;
+    this.tools.closeEditors(false);
+    await this.queue;
+    try {
+      await api.remove(this.state.doc.id);
+      toast('Document deleted from the server', 'ok');
+    } catch (e) {
+      if (!(e instanceof ApiError && e.status === 404)) { this.handleError(e); return; }
+    }
+    this.closeDoc();
+  }
+
   closeDoc() {
     this.state.doc = null;
     try { localStorage.removeItem(LS_SID); } catch { /* ignore */ }
@@ -316,6 +334,9 @@ class App {
       }
     });
     body.append(flat);
+    body.append(el('p.muted.small', { style: { margin: 0 } },
+      el('a', { href: 'privacy.html', target: '_blank', rel: 'noopener' }, 'Privacy policy'), ' · ',
+      el('a', { href: 'https://github.com/YoRu-Cat/FREE-PDF-EDITOR', target: '_blank', rel: 'noopener' }, 'Source code')));
     const ok = await modal({
       title: 'Document properties', body,
       buttons: [{ label: 'Cancel', value: false }, { label: 'Save', value: true, primary: true }],
@@ -659,6 +680,7 @@ class App {
     $('btnDownload').onclick = () => this.download();
     $('btnExportOpts').onclick = () => this.exportDialog();
     $('btnProps').onclick = () => this.propertiesDialog();
+    $('btnClose').onclick = () => this.closeAndDelete();
     $('btnFind').onclick = () => ($('findPanel').hidden ? this.openFind() : this.closeFind());
     $('btnAddBlank').onclick = () => this.pageOp('insert-blank', { at: this.viewer.current + 1 });
     $('btnInsertFile').onclick = () => { $('insertInput').value = ''; $('insertInput').click(); };

@@ -40,6 +40,7 @@
     <div class="tb-right" id="docActions" hidden>
       <button class="btn primary" id="btnDownload" title="Download PDF (Ctrl+S)" data-icon="download">Download</button>
       <button class="icon-btn" id="btnExportOpts" title="Download options (password, page range, flatten)" data-icon="more"></button>
+      <button class="icon-btn" id="btnClose" title="Close document and delete it from the server" data-icon="x"></button>
     </div>
   </header>
 
@@ -89,13 +90,19 @@
     <div class="drop" id="dropZone">
       <img src="favicon.svg" alt="" width="56" height="56">
       <h1>Edit any PDF</h1>
-      <p>Change and erase the real text inside your PDF, add text, images, signatures and drawings, fill forms, and rearrange pages.</p>
+      <p class="tagline">tired of getting scammed for pay to download bullshit. well fuck that here you can use this tool for free.</p>
+      <p>Change and erase the real text inside your PDF, add text, images, signatures and drawings, fill forms, and rearrange pages. No sign-up, no watermark, no paywall.</p>
       <div class="welcome-actions">
         <button class="btn primary lg" id="btnOpen2" data-icon="open">Open PDF</button>
         <button class="btn lg" id="btnNew2" data-icon="file">Blank document</button>
       </div>
       <p class="muted small">…or drop a file anywhere. Images, XPS, EPUB and other formats are converted to PDF.</p>
     </div>
+    <footer class="site-footer">
+      <a href="privacy.html">Privacy policy</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://github.com/YoRu-Cat/FREE-PDF-EDITOR" target="_blank" rel="noopener">Source code</a>
+    </footer>
   </section>
 
   <div class="drop-overlay" id="dropOverlay" hidden><div>Drop to open</div></div>
